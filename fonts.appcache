@@ -1,0 +1,10 @@
+CACHE MANIFEST
+#v4
+
+# Explicitly cached 'master entries'.
+CACHE:
+index.html
+
+# All other resources (e.g. sites) require the user to be online.
+NETWORK:
+*

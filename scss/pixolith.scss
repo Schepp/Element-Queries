@@ -1,0 +1,48 @@
+/**
+ * pixolith theme for reveal.js.
+ */
+// Default mixins and settings -----------------
+@import "template/mixins";
+@import "template/settings";
+// ---------------------------------------------
+// Include theme-specific fonts
+@import url(https://fonts.googleapis.com/css?family=Asap:400,700);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic,700italic);
+
+// Override theme settings (see ../template/settings.scss)
+$backgroundColor: #20282e;
+
+$mainFont: 'Open Sans', sans-serif;
+$linkColor: #e7ad52;
+$linkColorHover: lighten($linkColor, 20%);
+$headingFont: 'Asap', 'Open Sans', sans-serif;
+$headingTextShadow: none;
+$headingLetterSpacing: 0em;
+$headingTextTransform: none;
+$selectionBackgroundColor: #e7ad52;
+$mainFontSize: 30px;
+
+// Theme template ------------------------------
+@import "template/theme";
+// ---------------------------------------------
+
+// To be able to style backgrounds we need to increase specificity this way:
+.reveal {
+    .slide-background {
+
+        // pixolith titlepages
+        html.titlepage & {
+            color: #fff;
+
+            &:nth-child(3n+1) {
+                background-color: #2084d0;
+            }
+            &:nth-child(3n+2) {
+                background-color: #fac91d;
+            }
+            &:nth-child(3n+3) {
+                background-color: #ff637b;
+            }
+        }
+    }
+}

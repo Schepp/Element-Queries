@@ -1,0 +1,16 @@
+{
+    "name": "element-queries-demos",
+    "version": "1.0.0",
+    "private": true,
+    "description": "",
+    "main": "index.html",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "css-element-queries": "^0.3.2",
+        "sortablejs": "^1.4.2"
+    }
+}
