@@ -13,14 +13,14 @@
 $backgroundColor: #20282e;
 
 $mainFont: 'Open Sans', sans-serif;
-$linkColor: #e7ad52;
+$linkColor: #2084d0;
 $linkColorHover: lighten($linkColor, 20%);
 $headingFont: 'Asap', 'Open Sans', sans-serif;
 $headingTextShadow: none;
 $headingLetterSpacing: 0em;
 $headingTextTransform: none;
 $selectionBackgroundColor: #e7ad52;
-$mainFontSize: 30px;
+$mainFontSize: 48px;
 
 // Theme template ------------------------------
 @import "template/theme";
@@ -43,6 +43,25 @@ $mainFontSize: 30px;
             &:nth-child(3n+3) {
                 background-color: #ff637b;
             }
+        }
+    }
+
+    section {
+        img,
+        video {
+            border: none;
+            background: transparent;
+            box-shadow: none;
+
+            &[src$=".png"] {
+                border: none;
+            }
+        }
+
+        code {
+            max-height: 600px;
+            font-size: 36px;
+            line-height: 1.25;
         }
     }
 }
