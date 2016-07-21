@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Element Queries Demo</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="../node_modules/sortablejs/Sortable.js"></script>
+    <script src="../node_modules/css-element-queries/src/ResizeSensor.js"></script>
+    <script src="../node_modules/css-element-queries/src/ElementQueries.js"></script>
+</head>
+<body>
+<div class="columns">
+    <div class="columns-column columns-75"></div>
+    <div class="columns-column columns-25"></div>
+</div>
+<div class="vcards">
+        <div class="vcard">
+            <div class="vcard-left">
+                <img src="../images/vcard.png"
+                     class="vcard-picture">
+            </div>
+            <div class="vcard-right">
+                <p class="vcard-data">Max Mustermann<br>
+                    <b>pixolith GmbH & Co. KG</b><br>
+                    <i>Master of Desaster</i><br><br>
+                    (unresponsive)</p>
+            </div>
+        </div>
+        <div class="vcard uses-media-queries">
+            <div class="vcard-left">
+                <img src="../images/vcard.png"
+                     class="vcard-picture">
+            </div>
+            <div class="vcard-right">
+                <p class="vcard-data">Max Mustermann<br>
+                    <b>pixolith GmbH & Co. KG</b><br>
+                    <i>Master of Desaster</i><br><br>
+                    (Media Queries)</p>
+            </div>
+        </div>
+        <div class="vcard uses-flexbox">
+            <div class="vcard-left">
+                <img src="../images/vcard.png"
+                     class="vcard-picture">
+            </div>
+            <div class="vcard-right">
+                <p class="vcard-data">Max Mustermann<br>
+                    <b>pixolith GmbH & Co. KG</b><br>
+                    <i>Master of Desaster</i><br><br>
+                    (Flexbox)</p>
+            </div>
+        </div>
+        <div class="vcard uses-element-queries">
+            <div class="vcard-left">
+                <img src="../images/vcard.png"
+                     class="vcard-picture">
+            </div>
+            <div class="vcard-right">
+                <p class="vcard-data">Max Mustermann<br>
+                    <b>pixolith GmbH & Co. KG</b><br>
+                    <i>Master of Desaster</i><br><br>
+                    (Element Queries)</p>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

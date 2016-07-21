@@ -1,0 +1,173 @@
+$vcardMQ: 'screen and (min-width: 24rem)';
+
+@import url(https://fonts.googleapis.com/css?family=Asap:400,700);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic,700italic);
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 2rem;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.columns {
+    display: flex;
+    width: 100%;
+    min-height: 10rem;
+    margin-bottom: 1rem;
+    align-items: stretch;
+    justify-items: stretch;
+
+    &-75,
+    &-25 {
+        flex-grow: 1;
+        flex-shrink: 1;
+        padding: 1rem .5rem;
+        background-color: #ddd;
+        background-clip: content-box;
+    }
+    &-75 {
+        flex-basis: 75%;
+    }
+    &-25 {
+        flex-basis: 25%;
+    }
+}
+
+.vcards {
+    min-height: 10rem;
+    background-color: #ddd;
+}
+
+.vcard {
+    display: block;
+    overflow: hidden;
+    margin-bottom: 1rem;
+    font-size: 0;
+    background-color: #fac91d;
+    border: 1px solid #999;
+    box-shadow: 0 0 10px rgba(0,0,0,.5);
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    &.uses-flexbox {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: stretch;
+        width: 100%;
+    }
+
+    &-left,
+    &-right {
+        display: inline-block;
+        vertical-align: top;
+        width: 100%;
+        padding: 2em;
+        text-align: center;
+        font-size: 1rem;
+
+        .uses-media-queries & {
+            @media #{$vcardMQ} {
+                width: 50%;
+            }
+        }
+
+        .uses-min-max-width-calc & {
+            min-width: 50%;
+            max-width: 100%;
+            width: calc((384px - 100%) * 384);
+        }
+
+        .uses-flexbox & {
+            width: auto;
+            flex-basis: 10rem;
+            flex-grow: 1;
+            flex-shrink: 0;
+        }
+
+        .uses-element-queries[min-width~="24rem"] & {
+            width: 50%;
+        }
+    }
+
+    &-left {
+        .uses-media-queries & {
+            @media #{$vcardMQ} {
+                text-align: right;
+            }
+        }
+
+        .uses-flexbox & {
+            flex-grow: .5;
+        }
+
+        .uses-element-queries[min-width~="24rem"] & {
+            text-align: right;
+        }
+
+        .uses-element-queries[min-width~="32rem"] & {
+            width: 33%;
+        }
+    }
+
+    &-right {
+        padding-bottom: 22rem;
+        margin-bottom: -20rem;
+        background-color: #2084d0;
+        color: #fff;
+
+        .uses-media-queries & {
+            @media #{$vcardMQ} {
+                text-align: left;
+            }
+        }
+
+        .uses-element-queries & {
+            font-size: .5rem;
+        }
+
+        .uses-element-queries[min-width~="10rem"] & {
+            font-size: .625rem;
+        }
+
+        .uses-element-queries[min-width~="12rem"] & {
+            font-size: .75rem;
+        }
+
+        .uses-element-queries[min-width~="14rem"] & {
+            font-size: .875rem;
+        }
+
+        .uses-element-queries[min-width~="16rem"] & {
+            font-size: 1rem;
+        }
+
+        .uses-element-queries[min-width~="24rem"] & {
+            text-align: left;
+            font-size: .75rem;
+        }
+
+        .uses-element-queries[min-width~="32em"] & {
+            width: 67%;
+            text-align: left;
+            font-size: 1rem;
+        }
+
+        .uses-element-queries[min-width~="46em"] & {
+            text-align: left;
+            font-size: 1.5rem;
+        }
+    }
+
+    &-picture {
+        width: auto;
+        max-width: 100%;
+        height: auto;
+        border-radius: 50%;
+    }
+}

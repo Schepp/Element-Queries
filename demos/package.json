@@ -1,16 +1,22 @@
 {
-    "name": "element-queries-demos",
-    "version": "1.0.0",
-    "private": true,
-    "description": "",
-    "main": "index.html",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "author": "",
-    "license": "ISC",
-    "dependencies": {
-        "css-element-queries": "^0.3.2",
-        "sortablejs": "^1.4.2"
-    }
+  "name": "element-queries-demos",
+  "version": "1.0.0",
+  "private": true,
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "css-element-queries": "^0.3.2",
+    "sortablejs": "^1.4.2"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-autoprefixer": "^3.0.4",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-sass": "^1.2.0"
+  }
 }
