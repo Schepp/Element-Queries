@@ -1,4 +1,4 @@
-HTTP-2
+Element Queries
 ======
 
-Vortrag über HTTP/2 und seine Auswirkungen auf den etablierten Workflow
+Vortrag über Modulare Frontend-Entwicklung und Element Queries
